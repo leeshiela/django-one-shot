@@ -1,6 +1,7 @@
 {% extends "base.html" %} {% block main %}
 <div>
   <h1>{{ todo_list.name}}</h1>
+  <p><a href=" {% url "todo_list_update" todo_list.id %}">Edit</a></p>
   <h2>Tasks</h2>
   <table>
     <thead>
