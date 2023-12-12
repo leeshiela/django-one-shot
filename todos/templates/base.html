@@ -8,26 +8,6 @@
     <title>Document</title>
   </head>
   <body>
-    <main>
-      <div>
-        <h1>My Lists</h1>
-        <table>
-          <thead>
-            <tr>
-              <th>Name</th>
-              <th>Number of items</th>
-            </tr>
-          </thead>
-          <tbody>
-            {% for todo in todos_list.all %}
-            <tr>
-              <td>{{ todo.name }}</td>
-              <td></td>
-            </tr>
-            {% endfor %}
-          </tbody>
-        </table>
-      </div>
-    </main>
+    <main>{% block main %} {% endblock main %}</main>
   </body>
 </html>

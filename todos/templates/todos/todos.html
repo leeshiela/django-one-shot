@@ -1,1 +1,25 @@
-{% extends "base.html" %}
+{% extends "base.html" %} {% block main %}
+<div>
+  <h1>My Lists</h1>
+  <table>
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Number of items</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for todo in todos_list %}
+      <tr>
+        <td>
+         <a href="{% url "todo_list_detail" todo.id %}">
+                {{ todo.name }}
+            </a>
+            </td>
+        <td>{{ todo.items.all|length}}</td>
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+</div>
+{% endblock main %}
